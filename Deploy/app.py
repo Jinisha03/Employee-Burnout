@@ -5,7 +5,7 @@ import pickle
 app = Flask(__name__)
 model = pickle.load(open("cat_model_pickle.pkl", 'rb'))
 
-@app.route('/predict')
+@app.route('/')
 def home_page():
     return render_template('predict.html')
 
@@ -22,8 +22,8 @@ def predict_page():
 
     return render_template('predict.html', prediction_text='Employee Burnout Score is {}'.format(output))
 
-@app.route('/predict_api',methods=['POST'])
-def predict_api():
+@app.route('/results',methods=['POST'])
+def results():
     '''
     For direct API calls trought request
     '''

@@ -39,7 +39,7 @@ def predict():
       
         Mental_Fatigue_Score = float(request.form['Mental Fatigue Score'])
      
-        cursor.execute("""INSERT INTO 'Employee'('Employee ID','Date of Joining','Gender','Company Type','WFH Setup Available','Designation','Resource Allocation','Mental Fatigue Score') VALUES('{}','{}','{}','{}','{}','{}','{}','{}')""".format(Employee_ID, Date_of_Joining, Gender, Company_Type,WFH_Setup_Available, Designation, Working_Hours, Mental_Fatigue_Score))
+        cursor.execute("""INSERT INTO 'Employee'('Employee_ID','Date_of_Joining','Gender','Company_Type','WFH_Setup_Available','Designation','Resource_Allocation','Mental_Fatigue_Score') VALUES('{}','{}','{}','{}','{}','{}','{}','{}')""".format(Employee_ID, Date_of_Joining, Gender, Company_Type,WFH_Setup_Available, Designation, Working_Hours, Mental_Fatigue_Score))
         con.commit()
         #pred = model.predict([[ Employee_ID, Date_of_Joining, Gender, Company_Type,WFH_Setup_Available, Designation, Working_Hours, Mental_Fatigue_Score]])
         #output = round(pred[0],2)

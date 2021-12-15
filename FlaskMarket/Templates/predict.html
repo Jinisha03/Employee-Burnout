@@ -1,6 +1,51 @@
 <!doctype html>
 <html lang="en">
   <head>
+      <style>
+              .responsive {
+          width: 100%;
+          height: auto;
+        }
+    html {
+      scroll-behavior: smooth;
+    }
+    .search.input {
+        width:15rem;
+        padding: 12px 24px;
+        background-color: transparent;
+        transition: transform 250ms ease-in-out;
+        font-size: 14px;
+        line-height: 10px;
+        color: #fff;
+        background-color: transparent;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: 18px 18px;
+        background-position: 95% center;
+        border-radius: 50px;
+        border: 1px solid #fff;
+        transition: all 250ms ease-in-out;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+    }    
+    .search:focus{
+        padding: 12px 0;
+        outline: 0;
+        border: 1px solid transparent;
+        border-bottom: 1px solid #fff;
+        border-radius: 0;
+        background-position: 100% center;
+    }
+    .nav-item{
+        white-space:nowrap;
+        font-weight: bolder;
+    }
+    .navbar-nav>li>a:hover{
+        color: brown !important;
+        cursor: pointer!important;
+        transition: all 300ms ease-in-out!important;
+    }
+      </style>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,14 +55,45 @@
 
     <title>Predictor</title>
   </head>
-  <body>
+  <body style="background-color: bisque;">
+   
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Employee Burnout Rate Predictor</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Blogs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">About</a>
+              </li>
+            
+           
+            </ul>
+          
+          </div>
+        </div>
+      </nav>
+    <br>
+    
     <form>
-        <div class="row mb-3">
+        
+        <div class="row mb-3" >
+           
           <label for="inputEmail3" class="col-sm-2 col-form-label">Employee ID</label>
           <div class="col-sm-10">
             <input type="text" name= "Employee ID" placeholder="eg- john" class="form-control" id="inputEmail3">
           </div>
         </div>
+        
         
         <div class="row mb-3">
           <label for="inputPassword3" class="col-sm-2 col-form-label">Date Of Joining</label>
@@ -75,7 +151,7 @@
  
         <button type="submit" class="btn btn-primary">PREDICT</button>
       </form>
-
+    
 
       {{ prediction_text }}
 

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset ="UTF-8">
+    <meta http_equiv="X-UA-Compatible" content="IE=edge"
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Model Deployment</title>
+</head>
+<body>
+    <h1>Predictor Page </h1>
+    <p>
+        Enter the following Details
+    </p>
+
+    <form  action="/sub" method="POST">
+    
+        <div class="row mb-3" >
+            
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Employee ID</label>
+            <div class="col-sm-10">
+            <input type="text" name= "Employee ID" placeholder="eg- john" class="form-control" id="inputEmail3">
+            </div>
+        </div>
+        
+        
+        <div class="row mb-3">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Date Of Joining</label>
+            <div class="col-sm-10">
+            <input type="date" name="Date of Joining" placeholder="yyyy-mm-dd" class="form-control" id="inputPassword3">
+            </div>
+        </div>
+        
+        <div class="row mb-3">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Gender</label>
+            <div class="col-sm-10">
+            <input type="text" name= "Gender" placeholder="Male/Female" class="form-control" id="inputEmail3">
+            </div>
+        </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Company Type</label>
+            <div class="col-sm-10">
+            <input type="text" name= "Company Type" placeholder="Service/Product" class="form-control" id="inputEmail3">
+            </div>
+        </div>
+            
+        <div class="row mb-3">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">WFH Setup Available</label>
+            <div class="col-sm-10">
+            <input type="text" name= "WFH Setup Available" placeholder="Yes/No" class="form-control" id="inputEmail3">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Designation</label>
+            <div class="col-sm-10">
+            <input type="text" name= "Designation" placeholder="1.0-5.0" class="form-control" id="inputEmail3">
+            </div>
+        </div>  
+        
+        <div class="row mb-3">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Resource Allocation</label>
+            <div class="col-sm-10">
+            <input type="text" name= "Resource Allocation" placeholder="1.0- 10.0" class="form-control" id="inputEmail3">
+            </div>
+        </div>
+        
+        <div class="row mb-3">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Mental Fatigue Score</label>
+            <div class="col-sm-10">
+            <input type="text" name= "Mental Fatigue Score" placeholder="1.0- 10.0" class="form-control" id="inputEmail3">
+            </div>
+        </div>
+            
+            </div>
+            </fieldset>
+
+    
+        <button type="submit" class="btn btn-primary">PREDICT</button>
+    </form>
+        
+
+</body>
+</html> 
